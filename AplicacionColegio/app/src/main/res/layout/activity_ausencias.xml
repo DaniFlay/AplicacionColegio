@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Ausencias"
+        android:orientation="vertical"
+        android:background="@color/janna">
+        <TextView
+            android:id="@+id/nombreText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_alignParentTop="true">
+
+        </TextView>
+        <EditText
+            android:layout_below="@+id/nombreText"
+            android:id="@+id/nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="17"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+        </EditText>
+        <TextView
+            android:id="@+id/apellidosText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/apellidos"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@+id/nombre">
+
+        </TextView>
+        <EditText
+            android:layout_below="@+id/apellidosText"
+            android:id="@+id/apellidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="17"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+        </EditText>
+        <TextView
+            android:id="@+id/razonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/permiso_razpn"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_below="@+id/apellidos">
+        </TextView>
+    <Spinner
+        android:layout_below="@+id/razonText"
+        android:id="@+id/spinnerRazon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp">
+
+    </Spinner>
+            <TextView
+                android:id="@+id/fechaText"
+                android:layout_below="@+id/spinnerRazon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fechaI"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp">
+
+            </TextView>
+
+                <EditText
+                    android:layout_below="@+id/fechaText"
+                    android:id="@+id/fechaInicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:ems="5">
+
+                </EditText>
+                <ImageButton
+                    android:layout_below="@+id/fechaText"
+                    android:layout_toEndOf="@+id/fechaInicio"
+                    android:id="@+id/botonFechaI"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    android:layout_marginStart="5dp"
+                    android:backgroundTint="@color/imageButton"
+                    >
+                </ImageButton>
+            <TextView
+                android:id="@+id/fechaFinText"
+                android:layout_below="@+id/spinnerRazon"
+                android:layout_toEndOf="@+id/botonFechaI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fechaF"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp">
+
+            </TextView>
+                <EditText
+                    android:layout_below="@+id/fechaFinText"
+                    android:layout_toEndOf="@+id/botonFechaI"
+                    android:id="@+id/fechaFin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:ems="5">
+
+                </EditText>
+
+                <ImageButton
+                    android:layout_below="@+id/fechaFinText"
+                    android:layout_toEndOf="@+id/fechaFin"
+                    android:id="@+id/botonFechaF"
+                    android:backgroundTint="@color/imageButton"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@android:drawable/ic_menu_my_calendar">
+
+                </ImageButton>
+
+            <TextView
+                android:id="@+id/horaInicioText"
+                android:layout_below="@+id/fechaInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/horaI"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp">
+
+            </TextView>
+                <EditText
+                    android:layout_below="@+id/horaInicioText"
+                    android:id="@+id/horaInicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:ems="5">
+
+                </EditText>
+                <ImageButton
+                    android:layout_below="@id/horaInicioText"
+                    android:layout_toEndOf="@+id/horaInicio"
+                    android:id="@+id/botonHoraI"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@android:drawable/ic_lock_idle_alarm"
+                    android:layout_marginStart="5dp"
+                    android:backgroundTint="@color/imageButton">
+                </ImageButton>
+
+            <TextView
+                android:id="@+id/horaFinText"
+                android:layout_below="@+id/fechaFin"
+                android:layout_toEndOf="@+id/botonHoraI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/horaF"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp">
+
+            </TextView>
+                <EditText
+                    android:layout_below="@+id/horaFinText"
+                    android:layout_toEndOf="@+id/botonHoraI"
+                    android:id="@+id/horaFin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:ems="5">
+                </EditText>
+                <ImageButton
+                    android:layout_below="@+id/horaFinText"
+                    android:layout_toEndOf="@+id/horaFin"
+                    android:id="@+id/botonHoraF"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@android:drawable/ic_lock_idle_alarm"
+                    android:layout_marginStart="5dp"
+                    android:backgroundTint="@color/imageButton">
+                </ImageButton>
+    <Button
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/botonHoraI"
+        android:id="@+id/enviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enviar"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/boton"
+        android:textColor="@color/white">
+    </Button>
+</RelativeLayout>
